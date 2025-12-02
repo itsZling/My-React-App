@@ -1,4 +1,7 @@
-
+:root {
+  --text-clr: #665F5F;
+  --secondary-text-clr: #B0B3C1;
+}
 .card {
   border: 1px solid #2e2e2e;
   border-radius: 10px;
