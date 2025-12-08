@@ -18,3 +18,8 @@ If you are developing a production application, we recommend using TypeScript wi
 To Run
 1.) cd my-react-app (make sure you're in the right folder)
 2.) npm run dev
+
+To quickly update
+1.) new terminal (CTRL + SHIFT + `)
+2.) git commit -a
+3.) add comment and close file
