@@ -10,7 +10,7 @@ function App() {
   return(
     <>
       <Card name='Apothecary' pfp={pfp}/>
-      <Card name='N0t_a_nam3' pfp={thanks}/>
+      <Card name='n0t_a_nam3' pfp={thanks}/>
       <NavBar/>
       <Button/>
       <Footer/>

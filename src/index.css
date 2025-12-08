@@ -25,29 +25,36 @@ html {
   list-style-type: none;
   font-size: 24px;
   padding-left: 0px;
-}
 
-.nav-group > li > a {
-  text-decoration: none;
-  > span {
-    color: var(--text-clr);
+  > li > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+    > span {color: var(--text-clr);}
+    
+    > svg {
+      fill: var(--mafu);
+      margin-right: 5px;
+    }
   }
-}
-.nav-group > li > a > svg {
-  fill: var(--mafu);
-  margin-right: 5px;
+
 }
 
-.arrow-on {
+.arrow-on, .arrow-off {
   padding-left: 0px;
   padding-bottom: 5px;
   background-color: var(--secondary-text-clr);
   border: none;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  
   span {
     font-size: 24px;
     color: var(--text-clr);
   }
+
   svg {
     fill: var(--mafu);
     margin-right: auto;
@@ -56,26 +63,9 @@ html {
   }
 }
 
-.arrow-off {
-  padding-left: 0px;
-  padding-bottom: 5px;
-  background-color: var(--secondary-text-clr);
-  border: none;
-  background-color: #fff;
-    span {
-    font-size: 24px;
-    color: var(--text-clr);
-  }
-  svg {
-    fill: var(--mafu);
-    margin-right: auto;
-    transition: 300ms ease-in-out;
-    rotate: 180deg;
-  }
+.arrow-off svg {rotate: 180deg;}
 
-}
-
-.card-button-active {
+.card-button-active, .card-button-inactive {
   background: linear-gradient(var(--angle), var(--kaito), var(--mafu));
   animation: rotateGradient 2s linear infinite;
   border: 1px solid #2e2e2e;
@@ -91,14 +81,6 @@ html {
 .card-button-inactive {
   background: linear-gradient(var(--angle), var(--shizu), var(--airi));
   animation: rotateGradient 2s linear infinite;
-  border: 1px solid #2e2e2e;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #727272;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  max-width: 250px;
-  display: inline-block;
 }
 
 .card .card-image {
@@ -107,29 +89,22 @@ html {
   margin-bottom: 10px;
 }
 
-.card .card-title-active {
+.card .card-title-active, .card .card-title-inactive {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0px;
   color: #cfcfcf;
 }
 
-.card .card-description-active {
+.card .card-description-active, .card .card-description-inactive {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #cfcfcf;
 }
 
-.card .card-title-inactive {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  margin: 0px;
-  color: #1d1c1c;
-}
+.card .card-title-inactive {color: #1d1c1c;}
 
-.card .card-description-inactive {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #1d1c1c;
-}
+.card .card-description-inactive {color: #1d1c1c;}
 
-.button-on {
+.button-on, .button-off {
   background: linear-gradient(var(--angle), #22c, #627);
   animation: rotateGradient 2s linear infinite;
   color: #fefefe;
@@ -142,13 +117,7 @@ html {
 
 .button-off {
   background: linear-gradient(var(--angle), #9ED, #FAC);
-  animation: rotateGradient 2s linear infinite;
   color: #101010;
-  font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: none;
-  cursor: pointer;
 }
 
 @property --angle {
@@ -160,10 +129,4 @@ html {
 @keyframes rotateGradient {
   from {--angle: 0deg;}
   to {--angle: 360deg;}
-}
-
-@property --shadow-rotation {
-  syntax: "<angle>";
-  initial-value: 0turn;
-  inherits: false;
 }
