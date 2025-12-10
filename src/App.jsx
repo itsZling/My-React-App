@@ -4,6 +4,7 @@ import Button from "./Buttton.jsx";
 import NavBar from "./NavBar.jsx";
 import pfp from './assets/pfp.png'
 import thanks from './assets/thanks.png'
+import Teiring from "./Teiring.jsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Card name='Apothecary' pfp={pfp}/>
       <Card name='n0t_a_nam3' pfp={thanks}/>
       <NavBar/>
+      <Teiring/>
       <Button/>
       <Footer/>
     </>
